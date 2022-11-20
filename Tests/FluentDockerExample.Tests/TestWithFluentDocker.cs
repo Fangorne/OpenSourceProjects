@@ -32,7 +32,8 @@ public class TestWithFluentDocker : IClassFixture<DockerFixture>
 {
     #region fields
 
-    private static readonly ConnectionMultiplexer Redis = ConnectionMultiplexer.Connect(
+    private static readonly ConnectionMultiplexer Redis =
+        ConnectionMultiplexer.Connect(
         new ConfigurationOptions
         {
             EndPoints = {"localhost:7000"}
@@ -42,7 +43,6 @@ public class TestWithFluentDocker : IClassFixture<DockerFixture>
 
     #region
 
-   
     [Fact]
     public void TestRedis()
     {
