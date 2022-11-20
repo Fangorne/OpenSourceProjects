@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ductus.FluentDocker" Version="2.10.57" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
+    <PackageReference Include="SpecFlow.MsTest" Version="3.9.74" />
+    <PackageReference Include="StackExchange.Redis.Extensions.Core" Version="8.0.5" />
+    <PackageReference Include="xunit.core" Version="2.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="docker-compose.yml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

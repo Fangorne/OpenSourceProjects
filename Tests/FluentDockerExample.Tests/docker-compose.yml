@@ -1,0 +1,16 @@
+﻿version: '3'
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  redis:
+    image: 'bitnami/redis:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_PORT_NUMBER=7000
+    ports:
+      - '7000:7000'
+    networks:
+      - app-tier
