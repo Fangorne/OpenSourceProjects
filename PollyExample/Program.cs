@@ -1,5 +1,6 @@
 ﻿using Polly;
 
+// Old function before Polly
 static void GuardPersistApplicationData()
 {
     const int RETRY_ATTEMPTS = 5;
